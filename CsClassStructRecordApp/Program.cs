@@ -53,11 +53,50 @@ Console.WriteLine(r1.Equals(r2));
 Console.WriteLine(r1.Equals(r3) + "\n");
 
 int n = 123;
-double x = 25.5;
+//double x = 25.5;
 string name = "Bob";
 //Console.WriteLine($"n = {n}, x = {x}, name = {name}");
 
 CsClassStructRecordApp.SubNamesSpace.Employee e = new();
+
+Circle c1 = new Circle();
+Console.WriteLine(Circle.PI);
+
+MyData d1 = new("Bob", 23);
+
+class Circle
+{
+    public const float PI = 3.14f;
+    public float radius;
+}
+
+
+class Money
+{
+    public string title = "";
+    public decimal amount = 0.0m;
+    readonly public double rate = 10;
+
+    public Money() { }
+
+    public Money(double rate)
+    {
+        this.rate = rate;
+    }
+}
+
+readonly struct MyData
+{
+    readonly public string name;
+    readonly public int age;
+
+    public MyData(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+}
+
 
 
 class Fraction
